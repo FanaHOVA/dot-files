@@ -4,11 +4,21 @@ alias ...='cd ../..'
 alias pushf='git push origin -f'
 alias septestdb='RAILS_ENV=test bundle exec rake db:drop db:setup'
 
-rspec_by_kind() { 
-  rspec spec/$1/$2_spec.rb
+rspecm() { 
+  rspec spec/models/$1_spec.rb
 }
 
-alias runspec=rspec_by_kind
+rspecc() {
+  rspec spec/controllers/$1_controller_spec.rb
+}
+
+rspecs() {
+  rspec spec/services/$1_spec.rb
+}
+
+rspecw() {
+  rspec spec/workers/$1_worker_spec.rb
+}
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
