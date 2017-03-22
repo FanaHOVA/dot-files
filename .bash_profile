@@ -1,4 +1,12 @@
-PS1='🏈 [\w]: '
+if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
+    . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+fi
+
+source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='[\w$(__git_ps1)]\$ '
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias pushf='git push origin -f'
@@ -13,12 +21,13 @@ rspecc() {
 }
 
 rspecs() {
-  rspec spec/services/$1_spec.rb
+  rspec spec/services/$1_service_spec.rb
 }
 
 rspecw() {
   rspec spec/workers/$1_worker_spec.rb
 }
+
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
