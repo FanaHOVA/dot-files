@@ -5,7 +5,6 @@ fi
 source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='[\w$(__git_ps1)]\$ '
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -28,7 +27,15 @@ rspecw() {
   rspec spec/workers/$1_worker_spec.rb
 }
 
+dl_foundation_b() {
+  foundation blocks install $1
+  unzip -a $1.zip
+  cd $1
+  atom .
+}
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+
