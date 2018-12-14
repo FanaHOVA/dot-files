@@ -1,22 +1,24 @@
-if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
-    . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
-fi
+source ~/.git-prompt.sh
 
-source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='[\w$(__git_ps1)]\$ '
+export PS1='[🏀  \w$(__git_ps1)]\$ '
 
 alias ..='cd ..'
 alias ...='cd ../..'
+alias gco='git checkout'
+alias gp='git pull origin --rebase'
 alias pushf='git push origin -f'
+alias push='git push origin'
 alias septestdb='RAILS_ENV=test bundle exec rake db:drop db:setup'
+alias git-clean='git branch | grep -v "master\|staging" | xargs git branch -D'
+alias dev='foreman start -f Procfile.dev'
 
 rspecm() { 
   rspec spec/models/$1_spec.rb
 }
 
 rspecc() {
-  rspec spec/controllers/$1_controller_spec.rb
+  rspec spec/requests/$1_controller_spec.rb
 }
 
 rspecs() {
@@ -27,15 +29,13 @@ rspecw() {
   rspec spec/workers/$1_worker_spec.rb
 }
 
-dl_foundation_b() {
-  foundation blocks install $1
-  unzip -a $1.zip
-  cd $1
-  atom .
-}
+ulimit -n 1024
+
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
