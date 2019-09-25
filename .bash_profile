@@ -12,6 +12,19 @@ alias push='git push origin'
 alias septestdb='RAILS_ENV=test bundle exec rake db:drop db:setup'
 alias git-clean='git branch | grep -v "master\|staging" | xargs git branch -D'
 alias dev='foreman start -f Procfile.dev'
+alias voyagerConsole='heroku run rails c -a the645app'
+
+dumpLightProd() {
+  rake db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+  heroku pg:pull HEROKU_POSTGRESQL_IVORY 645app --exclude-table-data "versions;relateiq_list_backups;crunchbase_organizations;crunchbase_people;crunchbase_funding_rounds;score_breakdowns;crunchbase_acquisitions;crunchbase_ipos" --app the645app
+  rake db:create
+}
+
+dumpFullProd() {
+  rake db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+  heroku pg:pull HEROKU_POSTGRESQL_IVORY 645app --exclude-table-data "relateiq_list_backups;crunchbase_people;versions" --app the645app
+  rake db:create
+}
 
 rspecm() { 
   rspec spec/models/$1_spec.rb
@@ -39,3 +52,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+export PATH="/usr/local/sbin:$PATH"
