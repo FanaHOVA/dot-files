@@ -1,0 +1,5 @@
+prefix_rule(pattern=["git", "add"], decision="allow")
+prefix_rule(pattern=["git", "commit", "-m"], decision="allow")
+prefix_rule(pattern=["gh", "pr", "create"], decision="allow")
+prefix_rule(pattern=["git", "checkout", "-b"], decision="allow")
+prefix_rule(pattern=["swift", "test", "--package-path", "HyperReview", "--filter", "codex"], decision="allow")
