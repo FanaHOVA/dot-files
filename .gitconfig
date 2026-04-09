@@ -1,0 +1,18 @@
+# This is Git's per-user configuration file.
+[user]
+	email = fanahova@gmail.com
+	name = Alessio Fanelli
+[push]
+	autoSetupRemote = true
+[core]
+	editor = cursor --wait
+	pager = diff-so-fancy | less --tabs=4 -RF
+[http]
+	postBuffer = 157286400
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[pull]
+	rebase = true
+[trace2]
+	eventTarget = af_unix:stream:/Users/alessiofanelli/.git-ai/internal/daemon/trace2.sock
+	eventNesting = 10
