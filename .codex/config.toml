@@ -1,16 +1,11 @@
 model = "gpt-5.4"
 model_reasoning_effort = "xhigh"
-notify = [
-    "/Users/alessiofanelli/.git-ai/bin/git-ai",
-    "checkpoint",
-    "codex",
-    "--hook-input",
-]
 personality = "pragmatic"
 
 [features]
-rmcp_client = true
+codex_hooks = true
 multi_agent = true
+rmcp_client = true
 
 [mcp_servers.figma]
 url = "https://mcp.figma.com/mcp"
@@ -18,14 +13,8 @@ url = "https://mcp.figma.com/mcp"
 [mcp_servers.linear]
 url = "https://mcp.linear.app/mcp"
 
-[projects."/Users/alessiofanelli/hyperreview"]
-trust_level = "trusted"
-
-[projects."/Users/alessiofanelli/mcp-client"]
-trust_level = "trusted"
-
-[projects."/Users/alessiofanelli/website"]
-trust_level = "trusted"
+[plugins."figma@openai-curated"]
+enabled = true
 
 [plugins."github@openai-curated"]
 enabled = true
@@ -36,5 +25,11 @@ enabled = true
 [plugins."vercel@openai-curated"]
 enabled = true
 
-[plugins."figma@openai-curated"]
-enabled = true
+[projects."/Users/alessiofanelli/hyperreview"]
+trust_level = "trusted"
+
+[projects."/Users/alessiofanelli/mcp-client"]
+trust_level = "trusted"
+
+[projects."/Users/alessiofanelli/website"]
+trust_level = "trusted"

@@ -1,38 +1,35 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "hooks": {
     "PostToolUse": [
       {
-        "matcher": "Write|Edit|MultiEdit",
         "hooks": [
           {
-            "type": "command",
-            "command": "/Users/alessiofanelli/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
+            "command": "/Users/alessiofanelli/.git-ai/bin/git-ai checkpoint claude --hook-input stdin",
+            "type": "command"
           }
-        ]
+        ],
+        "matcher": "*"
       }
     ],
     "PreToolUse": [
       {
-        "matcher": "Write|Edit|MultiEdit",
         "hooks": [
           {
-            "type": "command",
-            "command": "/Users/alessiofanelli/.git-ai/bin/git-ai checkpoint claude --hook-input stdin"
+            "command": "/Users/alessiofanelli/.git-ai/bin/git-ai checkpoint claude --hook-input stdin",
+            "type": "command"
           }
-        ]
+        ],
+        "matcher": "*"
       }
     ]
   },
-  "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
-  "feedbackSurveyState": {
-    "lastShownTime": 1754065308598
-  },
-  "voiceEnabled": true,
   "voice": {
     "enabled": true,
     "mode": "hold"
-  }
+  },
+  "voiceEnabled": true
 }
