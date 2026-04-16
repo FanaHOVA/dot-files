@@ -1,5 +1,4 @@
 {
-  "fetchedAt": "2026-04-02T20:30:38.100Z",
   "plugins": [
     {
       "plugin": "code-review@claude-plugins-official",
