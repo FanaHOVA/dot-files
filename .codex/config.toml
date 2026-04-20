@@ -24,15 +24,3 @@ enabled = true
 
 [plugins."vercel@openai-curated"]
 enabled = true
-
-[projects."/Users/alessiofanelli/hyperreview"]
-trust_level = "trusted"
-
-[projects."/Users/alessiofanelli/mcp-client"]
-trust_level = "trusted"
-
-[projects."/Users/alessiofanelli/website"]
-trust_level = "trusted"
-
-[projects."/Users/alessiofanelli/generic-folder"]
-trust_level = "trusted"
