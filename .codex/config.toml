@@ -1,5 +1,5 @@
 model = "gpt-5.4"
-model_reasoning_effort = "xhigh"
+model_reasoning_effort = "high"
 personality = "pragmatic"
 
 [features]
@@ -33,4 +33,3 @@ enabled = true
 
 [plugins."gmail@openai-curated"]
 enabled = true
-
