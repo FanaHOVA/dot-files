@@ -6,3 +6,4 @@ prefix_rule(pattern=["swift", "test", "--package-path", "HyperReview", "--filter
 prefix_rule(pattern=["npm", "run", "test:e2e"], decision="allow")
 prefix_rule(pattern=["npm", "run", "test:integration"], decision="allow")
 prefix_rule(pattern=["git", "push", "origin"], decision="allow")
+prefix_rule(pattern=["/bin/zsh", "-lc", "python3 /Users/alessiofanelli/.codex/skills/.system/skill-creator/scripts/init_skill.py visitt-visitor-management --path /Users/alessiofanelli/.codex/skills --interface display_name=\"Visitt Visitor Management\" --interface short_description=\"Invite office visitors from calendar or CSV\" --interface default_prompt=\"Use $visitt-visitor-management to add today's office visitors from my calendar or a CSV to Visitt.\""], decision="allow")
