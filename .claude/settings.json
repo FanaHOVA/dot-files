@@ -22,6 +22,17 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "tanagram stop-hook",
+            "timeout": 120
+          }
+        ]
+      }
     ]
   },
   "alwaysThinkingEnabled": true,
