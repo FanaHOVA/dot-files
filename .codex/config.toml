@@ -1,8 +1,6 @@
 model = "gpt-5.5"
-model_reasoning_effort = "xhigh"
+model_reasoning_effort = "high"
 personality = "pragmatic"
-
-
 
 [features]
 codex_hooks = true
@@ -50,4 +48,3 @@ enabled = true
 
 [plugins."presentations@openai-primary-runtime"]
 enabled = true
-
