@@ -3,7 +3,6 @@ model_reasoning_effort = "low"
 personality = "pragmatic"
 
 [features]
-codex_hooks = true
 multi_agent = true
 rmcp_client = true
 
@@ -13,25 +12,7 @@ url = "https://mcp.figma.com/mcp"
 [mcp_servers.linear]
 url = "https://mcp.linear.app/mcp"
 
-[plugins."figma@openai-curated"]
-enabled = true
-
-[plugins."github@openai-curated"]
-enabled = true
-
-[plugins."notion@openai-curated"]
-enabled = true
-
-[plugins."vercel@openai-curated"]
-enabled = true
-
-[plugins."slack@openai-curated"]
-enabled = true
-
-[plugins."google-calendar@openai-curated"]
-enabled = true
-
-[plugins."gmail@openai-curated"]
+[plugins."browser-use@openai-bundled"]
 enabled = true
 
 [plugins."computer-use@openai-bundled"]
@@ -40,11 +21,32 @@ enabled = true
 [plugins."documents@openai-primary-runtime"]
 enabled = true
 
-[plugins."spreadsheets@openai-primary-runtime"]
+[plugins."figma@openai-curated"]
+enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."gmail@openai-curated"]
+enabled = true
+
+[plugins."google-calendar@openai-curated"]
+enabled = true
+
+[plugins."linear@openai-curated"]
+enabled = true
+
+[plugins."notion@openai-curated"]
 enabled = true
 
 [plugins."presentations@openai-primary-runtime"]
 enabled = true
 
-[plugins."browser-use@openai-bundled"]
+[plugins."slack@openai-curated"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."vercel@openai-curated"]
 enabled = true

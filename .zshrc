@@ -167,9 +167,6 @@ export PATH="$HOME/.local/bin:$PATH"
 [ -s "/Users/alessiofanelli/.bun/_bun" ] && source "/Users/alessiofanelli/.bun/_bun"
 eval "$(direnv hook zsh)"
 
-# Added by git-ai installer on Mon Feb  2 09:47:07 PST 2026
-export PATH="/Users/alessiofanelli/.git-ai/bin:$PATH"
-
 # Use gcloud ADC as default credentials source for gws.
 if [ -f "$HOME/.config/gcloud/application_default_credentials.json" ]; then
   export GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE="$HOME/.config/gcloud/application_default_credentials.json"
