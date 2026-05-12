@@ -1,5 +1,5 @@
 model = "gpt-5.5"
-model_reasoning_effort = "xhigh"
+model_reasoning_effort = "high"
 personality = "pragmatic"
 
 [features]
@@ -8,9 +8,6 @@ rmcp_client = true
 
 [mcp_servers.figma]
 url = "https://mcp.figma.com/mcp"
-
-[mcp_servers.linear]
-url = "https://mcp.linear.app/mcp"
 
 [plugins."browser-use@openai-bundled"]
 enabled = true
