@@ -181,3 +181,7 @@ fi
 # >>> minimal >>>
 [ -f "$HOME/.minimal/shim/shell-init/zsh.sh" ] && . "$HOME/.minimal/shim/shell-init/zsh.sh"
 # <<< minimal <<<
+
+# Added by Raindrop installer
+export PATH="$HOME/.raindrop/bin:$PATH"
+# End Raindrop installer

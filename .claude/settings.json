@@ -1,29 +1,30 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "hooks": {
     "PostToolUse": [
       {
-        "hooks": [],
-        "matcher": "*"
+        "matcher": "*",
+        "hooks": []
       }
     ],
     "PreToolUse": [
       {
-        "hooks": [],
-        "matcher": "*"
+        "matcher": "*",
+        "hooks": []
       }
     ]
   },
-  "permissions": {
-    "defaultMode": "auto"
-  },
-  "skipAutoPermissionPrompt": true,
-  "skipDangerousModePermissionPrompt": true,
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "voice": {
     "enabled": true,
     "mode": "hold"
   },
-  "voiceEnabled": true
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true,
+  "model": "sonnet"
 }

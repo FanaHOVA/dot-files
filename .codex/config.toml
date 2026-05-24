@@ -1,16 +1,18 @@
 model = "gpt-5.5"
-model_reasoning_effort = "medium"
+model_reasoning_effort = "xhigh"
 personality = "pragmatic"
 
 [features]
 multi_agent = true
 rmcp_client = true
+js_repl = false
 
 [mcp_servers.figma]
 url = "https://mcp.figma.com/mcp"
 
-[plugins."browser-use@openai-bundled"]
-enabled = true
+[mcp_servers.raindrop]
+command = "/Users/alessiofanelli/.raindrop/bin/raindrop"
+args = [ "workshop", "mcp" ]
 
 [plugins."computer-use@openai-bundled"]
 enabled = true
@@ -46,4 +48,7 @@ enabled = true
 enabled = true
 
 [plugins."vercel@openai-curated"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
 enabled = true
