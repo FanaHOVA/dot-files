@@ -1,6 +1,7 @@
 model = "gpt-5.5"
 model_reasoning_effort = "xhigh"
 personality = "pragmatic"
+notify = ["/Users/alessiofanelli/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 
 [features]
 multi_agent = true
@@ -13,6 +14,24 @@ url = "https://mcp.figma.com/mcp"
 [mcp_servers.raindrop]
 command = "/Users/alessiofanelli/.raindrop/bin/raindrop"
 args = [ "workshop", "mcp" ]
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/Codex.app/Contents/Resources/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+BROWSER_USE_MARKETPLACE_NAME = "openai-bundled"
+CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"
+CODEX_HOME = "/Users/alessiofanelli/.codex"
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = ""
+NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/node"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "167fdf579477181fba1773c1efb067b00c5a64fe85dafb50a2001bde198dc739"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/alessiofanelli/.codex"
+NODE_REPL_UNTRUSTED_ENV_ALLOWLIST = "BROWSER_USE_MARKETPLACE_NAME"
+SKY_CUA_SERVICE_PATH = "/Users/alessiofanelli/.codex/.tmp/bundled-marketplaces/openai-bundled/plugins/computer-use/Codex Computer Use.app"
 
 [plugins."computer-use@openai-bundled"]
 enabled = true
