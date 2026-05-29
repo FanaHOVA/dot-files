@@ -1,5 +1,5 @@
 model = "gpt-5.5"
-model_reasoning_effort = "medium"
+model_reasoning_effort = "xhigh"
 personality = "pragmatic"
 
 notify = ["/Users/alessiofanelli/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
