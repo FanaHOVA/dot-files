@@ -27,7 +27,7 @@ commit() {
   git add .
   git commit -m "$1"
   gp
-  push 
+  push
 }
 
 # Path to your Oh My Zsh installation.
