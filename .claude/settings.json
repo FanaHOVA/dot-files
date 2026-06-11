@@ -3,6 +3,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "PostToolUse": [
       {
@@ -18,8 +19,7 @@
     ]
   },
   "alwaysThinkingEnabled": true,
-  "model": "claude-fable-5[1m]",
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "tui": "fullscreen",
   "voice": {
     "enabled": true,
