@@ -55,3 +55,6 @@ enabled = true
 
 [plugins."chrome@openai-bundled"]
 enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true

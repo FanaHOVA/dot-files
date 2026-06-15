@@ -1,4 +1,11 @@
 {
   "version": 2,
-  "plugins": {}
+  "plugins": {
+    "figma@claude-plugins-official": [
+      {
+        "scope": "user",
+        "version": "2.2.50"
+      }
+    ]
+  }
 }
