@@ -3,7 +3,6 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5[1m]",
   "hooks": {
     "PostToolUse": [
       {
@@ -18,6 +17,9 @@
       }
     ]
   },
+  "enabledPlugins": {
+    "figma@claude-plugins-official": true
+  },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "tui": "fullscreen",
@@ -27,8 +29,5 @@
   },
   "skipDangerousModePermissionPrompt": true,
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true,
-  "enabledPlugins": {
-    "figma@claude-plugins-official": true
-  }
+  "voiceEnabled": true
 }
