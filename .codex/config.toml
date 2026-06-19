@@ -7,12 +7,12 @@ multi_agent = true
 rmcp_client = true
 js_repl = false
 
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+
 [mcp_servers.raindrop]
 command = "/Users/alessiofanelli/.raindrop/bin/raindrop"
 args = ["workshop", "mcp"]
-
-[mcp_servers.figma]
-url = "https://mcp.figma.com/mcp"
 
 [plugins."browser@openai-bundled"]
 enabled = true
