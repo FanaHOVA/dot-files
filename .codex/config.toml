@@ -1,5 +1,5 @@
 model = "gpt-5.5"
-model_reasoning_effort = "medium"
+model_reasoning_effort = "high"
 personality = "pragmatic"
 approval_policy = "never"
 approvals_reviewer = "user"
@@ -57,6 +57,9 @@ enabled = true
 enabled = true
 
 [plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
 enabled = true
 
 [plugins."vercel@openai-curated"]
