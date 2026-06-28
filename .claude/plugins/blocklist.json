@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    {
+      "plugin": "code-review@claude-plugins-official",
+      "reason": "just-a-test",
+      "text": "This is a test #5"
+    },
+    {
+      "plugin": "fizz@testmkt-marketplace",
+      "reason": "security",
+      "text": "this is a security test"
+    }
+  ]
+}

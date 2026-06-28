@@ -1,7 +1,6 @@
 model = "gpt-5.5"
-model_reasoning_effort = "medium"
+model_reasoning_effort = "xhigh"
 personality = "pragmatic"
-
 approval_policy = "never"
 approvals_reviewer = "user"
 sandbox_mode = "danger-full-access"
@@ -17,6 +16,15 @@ url = "https://mcp.figma.com/mcp"
 [mcp_servers.raindrop]
 command = "/Users/alessiofanelli/.raindrop/bin/raindrop"
 args = [ "workshop", "mcp" ]
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
 
 [plugins."documents@openai-primary-runtime"]
 enabled = true
@@ -39,6 +47,9 @@ enabled = true
 [plugins."notion@openai-curated"]
 enabled = true
 
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
 [plugins."presentations@openai-primary-runtime"]
 enabled = true
 
@@ -48,20 +59,8 @@ enabled = true
 [plugins."spreadsheets@openai-primary-runtime"]
 enabled = true
 
-[plugins."vercel@openai-curated"]
-enabled = true
-
-[plugins."computer-use@openai-bundled"]
-enabled = true
-
-[plugins."pdf@openai-primary-runtime"]
-enabled = true
-
 [plugins."template-creator@openai-primary-runtime"]
 enabled = true
 
-[plugins."browser@openai-bundled"]
-enabled = true
-
-[plugins."chrome@openai-bundled"]
+[plugins."vercel@openai-curated"]
 enabled = true
