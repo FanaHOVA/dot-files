@@ -13,12 +13,3 @@
 	diffFilter = diff-so-fancy --patch
 [pull]
 	rebase = true
-[trace2]
-	eventTarget = af_unix:stream:/Users/alessiofanelli/.git-ai/internal/daemon/trace2.sock
-	eventNesting = 10
-[credential "https://github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
